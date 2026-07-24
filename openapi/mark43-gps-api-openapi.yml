@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Mark43 Partnerships Associated Records GPS API
+  version: external
+  description: 'Mark43''s Partnerships (External) API lets approved law-enforcement technology partners integrate with a Mark43 agency''s cloud RMS and CAD: create and read reports, persons, evidence and chain-of-custody, attachments, CAD events, warrants, tasks, users, and E911 data. REST over HTTPS with JSON payloads and HTTP Basic authentication using secure API tokens.'
+  x-provenance:
+    method: derived
+    source: https://developers.mark43.com/
+    generated: '2026-07-20'
+servers:
+- url: https://{department}.mark43.com/partnerships/api
+  description: Per-agency Mark43 tenant. Replace {department} with your agency subdomain.
+  variables:
+    department:
+      default: department
+      description: Your agency's Mark43 tenant subdomain.
+security:
+- httpBasic: []
+tags:
+- name: GPS
+paths:
+  /partnerships/api/external/gps:
+    post:
+      tags:
+      - GPS
+      operationId: postGps
+      summary: Create/submit gps (GPS)
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResult'
+        '400':
+          description: Bad request; success=false with error message.
+        '401':
+          description: Missing or invalid HTTP Basic credentials.
+        '403':
+          description: Authenticated token lacks access to the resource.
+        '404':
+          description: Resource not found.
+        '429':
+          description: Too many requests (RFC 6585 rate limiting).
+        '500':
+          description: Internal server error.
+components:
+  schemas:
+    ApiResult:
+      type: object
+      description: Standard Mark43 response envelope wrapping every endpoint's payload.
+      properties:
+        data:
+          description: The created or retrieved object(s); shape varies by endpoint.
+        success:
+          type: boolean
+          description: Whether the request succeeded.
+        error:
+          type: string
+          description: Error message populated when success is false.
+      required:
+      - success
+  securitySchemes:
+    httpBasic:
+      type: http
+      scheme: basic
+      description: Secure API token presented via the standard HTTP Basic Authorization header on every request; issued by your Mark43 Technical Services Representative.
