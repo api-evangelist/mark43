@@ -1,7 +1,17 @@
 aid: mark43
 name: Mark43
-description: Mark43 is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Mark43 is a cloud-native public safety software company whose platform unifies
+  computer-aided dispatch (CAD), records management (RMS), first-responder mobile
+  applications, evidence and property management, and analytics for law enforcement
+  and public safety agencies. Serving more than 300 federal, state, and local
+  agencies, Mark43 exposes a Partnerships (External) API that lets approved
+  location providers, community-engagement software, and other law-enforcement
+  technologies integrate directly with an agency's Mark43 tenant. The REST API
+  provides endpoints for reports, persons, evidence and chain-of-custody,
+  attachments, CAD events and configuration, warrants, tasks, users, vehicles,
+  and E911 data, secured with HTTP Basic authentication using agency-issued API
+  tokens and returning a consistent JSON response envelope.
 url: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +19,408 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://mark43.com/wp-content/uploads/2021/04/cropped-Mark43_logo_horizontal_black-1-1-32x32.png
 tags:
 - Company
-apis: []
+- Public Safety
+- Law Enforcement
+- Records Management
+- Computer-Aided Dispatch
+- CAD
+- RMS
+- GovTech
+- Evidence Management
+- Government
+apis:
+- aid: mark43:mark43-associated-records-api
+  name: Mark43 Associated Records API
+  description: The Associated Records API from Mark43 — 2 operation(s) for associated records.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Associated Records
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-associated-records-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-attachments-api
+  name: Mark43 Attachments API
+  description: The Attachments API from Mark43 — 5 operation(s) for attachments.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-attachments-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-cad-configuration-api
+  name: Mark43 CAD Configuration API
+  description: The CAD Configuration API from Mark43 — 4 operation(s) for cad configuration.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - CAD Configuration
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-cad-configuration-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-cad-events-api
+  name: Mark43 CAD Events API
+  description: The CAD Events API from Mark43 — 10 operation(s) for cad events.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - CAD Events
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-cad-events-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-cad-tickets-api
+  name: Mark43 CAD Tickets API
+  description: The CAD Tickets API from Mark43 — 1 operation(s) for cad tickets.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - CAD Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-cad-tickets-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-cases-api
+  name: Mark43 Cases API
+  description: The Cases API from Mark43 — 3 operation(s) for cases.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Cases
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-cases-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-e911-api
+  name: Mark43 E911 API
+  description: The E911 API from Mark43 — 2 operation(s) for e911.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - E911
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-e911-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-evidence-api
+  name: Mark43 Evidence API
+  description: The Evidence API from Mark43 — 5 operation(s) for evidence.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Evidence
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-evidence-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-gps-api
+  name: Mark43 GPS API
+  description: The GPS API from Mark43 — 1 operation(s) for gps.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - GPS
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-gps-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-persons-api
+  name: Mark43 Persons API
+  description: The Persons API from Mark43 — 8 operation(s) for persons.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Persons
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-persons-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-reports-api
+  name: Mark43 Reports API
+  description: The Reports API from Mark43 — 38 operation(s) for reports.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-reports-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-tasks-api
+  name: Mark43 Tasks API
+  description: The Tasks API from Mark43 — 1 operation(s) for tasks.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-tasks-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-users-api
+  name: Mark43 Users API
+  description: The Users API from Mark43 — 7 operation(s) for users.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-vehicles-api
+  name: Mark43 Vehicles API
+  description: The Vehicles API from Mark43 — 1 operation(s) for vehicles.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Vehicles
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-vehicles-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
+- aid: mark43:mark43-warrants-api
+  name: Mark43 Warrants API
+  description: The Warrants API from Mark43 — 5 operation(s) for warrants.
+  humanURL: https://developers.mark43.com/
+  baseURL: https://department.mark43.com/partnerships/api
+  tags:
+  - Warrants
+  properties:
+  - type: OpenAPI
+    url: openapi/mark43-warrants-api-openapi.yml
+  - type: Documentation
+    url: https://developers.mark43.com/
+  - type: APIReference
+    url: https://developers.mark43.com/
+  - type: Authentication
+    url: authentication/mark43-authentication.yml
+  - type: Conventions
+    url: conventions/mark43-conventions.yml
+  - type: ErrorCatalog
+    url: errors/mark43-problem-types.yml
+  - type: DataModel
+    url: data-model/mark43-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: TrustCenter
+  url: security/mark43-trust-center.yml
+- type: DeveloperPortal
+  url: https://developers.mark43.com/
+- type: Documentation
+  url: https://developers.mark43.com/
+- type: APIReference
+  url: https://developers.mark43.com/
+- type: Authentication
+  url: authentication/mark43-authentication.yml
+- type: TermsOfService
+  url: https://developers.mark43.com/#developer-terms-of-use-agreement
+- type: Website
+  url: https://mark43.com/
+- type: Integrations
+  url: https://mark43.com/partners-integrations/
+- type: GitHubOrganization
+  url: https://github.com/mark43
+- type: Conventions
+  url: conventions/mark43-conventions.yml
+- type: ErrorCatalog
+  url: errors/mark43-problem-types.yml
+- type: DataModel
+  url: data-model/mark43-data-model.yml
+- type: Conformance
+  url: conformance/mark43-conformance.yml
+- type: MCPServer
+  url: mcp/mark43-mcp.yml
+- type: LLMsTxt
+  url: llms/mark43-llms.txt
+- type: Compliance
+  url: https://trust.mark43.com/
+- type: DomainSecurity
+  url: security/mark43-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1
