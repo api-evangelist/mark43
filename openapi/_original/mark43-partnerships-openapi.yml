@@ -1,0 +1,1752 @@
+# Derived by the API Evangelist enrichment pipeline from the published Mark43 API reference.
+# method: derived | source: https://developers.mark43.com/ (Widdershins HTML reference)
+# Paths, HTTP methods, base server, HTTP Basic auth, and the ApiResult response envelope are
+# verbatim from the published reference; operationIds, summaries, and tags are derived labels.
+openapi: 3.1.0
+info:
+  title: Mark43 Partnerships API
+  version: external
+  description: >-
+    Mark43's Partnerships (External) API lets approved law-enforcement technology partners
+    integrate with a Mark43 agency's cloud RMS and CAD: create and read reports, persons,
+    evidence and chain-of-custody, attachments, CAD events, warrants, tasks, users, and E911
+    data. REST over HTTPS with JSON payloads and HTTP Basic authentication using secure API tokens.
+  x-provenance:
+    method: derived
+    source: https://developers.mark43.com/
+    generated: '2026-07-20'
+servers:
+  - url: https://{department}.mark43.com/partnerships/api
+    description: Per-agency Mark43 tenant. Replace {department} with your agency subdomain.
+    variables:
+      department:
+        default: department
+        description: Your agency's Mark43 tenant subdomain.
+security:
+  - httpBasic: []
+tags:
+  - name: "Associated Records"
+  - name: "Attachments"
+  - name: "CAD Configuration"
+  - name: "CAD Events"
+  - name: "CAD Tickets"
+  - name: "Cases"
+  - name: "E911"
+  - name: "Evidence"
+  - name: "GPS"
+  - name: "Persons"
+  - name: "Reports"
+  - name: "Tasks"
+  - name: "Users"
+  - name: "Vehicles"
+  - name: "Warrants"
+paths:
+  "/partnerships/api/external/associated_records/external_links":
+    get:
+      tags: ["Associated Records"]
+      operationId: getAssociatedRecordsExternalLinks
+      summary: "Retrieve external links (Associated Records)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["Associated Records"]
+      operationId: postAssociatedRecordsExternalLinks
+      summary: "Create/submit external links (Associated Records)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/associated_records/external_links/report_ids":
+    post:
+      tags: ["Associated Records"]
+      operationId: postAssociatedRecordsExternalLinksReportIds
+      summary: "Create/submit report ids (Associated Records)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/attachments/":
+    get:
+      tags: ["Attachments"]
+      operationId: getAttachments
+      summary: "Retrieve attachments (Attachments)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/attachments/files":
+    post:
+      tags: ["Attachments"]
+      operationId: postAttachmentsFiles
+      summary: "Create/submit files (Attachments)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/attachments/images":
+    post:
+      tags: ["Attachments"]
+      operationId: postAttachmentsImages
+      summary: "Create/submit images (Attachments)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/attachments/search":
+    post:
+      tags: ["Attachments"]
+      operationId: postAttachmentsSearch
+      summary: "Create/submit search (Attachments)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/attachments/stream/":
+    get:
+      tags: ["Attachments"]
+      operationId: getAttachmentsStream
+      summary: "Retrieve stream (Attachments)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/configuration/stations":
+    get:
+      tags: ["CAD Configuration"]
+      operationId: getCadConfigurationStations
+      summary: "Retrieve stations (CAD Configuration)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/configuration/unit_states":
+    get:
+      tags: ["CAD Configuration"]
+      operationId: getCadConfigurationUnitStates
+      summary: "Retrieve unit states (CAD Configuration)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/configuration/unit_statuses":
+    get:
+      tags: ["CAD Configuration"]
+      operationId: getCadConfigurationUnitStatuses
+      summary: "Retrieve unit statuses (CAD Configuration)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/configuration/units":
+    get:
+      tags: ["CAD Configuration"]
+      operationId: getCadConfigurationUnits
+      summary: "Retrieve units (CAD Configuration)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["CAD Configuration"]
+      operationId: postCadConfigurationUnits
+      summary: "Create/submit units (CAD Configuration)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEvent
+      summary: "Create/submit event (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/additional_info":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventAdditionalInfo
+      summary: "Create/submit additional info (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/scheduled":
+    get:
+      tags: ["CAD Events"]
+      operationId: getCadEventScheduled
+      summary: "Retrieve scheduled (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventScheduled
+      summary: "Create/submit scheduled (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/scheduled/update/agency":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventScheduledUpdateAgency
+      summary: "Create/submit agency (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/scheduled/update/cfs":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventScheduledUpdateCfs
+      summary: "Create/submit cfs (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/scheduled/update/location":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventScheduledUpdateLocation
+      summary: "Create/submit location (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/event/scheduled/update/reschedule":
+    post:
+      tags: ["CAD Events"]
+      operationId: postCadEventScheduledUpdateReschedule
+      summary: "Create/submit reschedule (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/events":
+    get:
+      tags: ["CAD Events"]
+      operationId: getCadEvents
+      summary: "Retrieve events (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/events/active":
+    get:
+      tags: ["CAD Events"]
+      operationId: getCadEventsActive
+      summary: "Retrieve active (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad/events/ids":
+    get:
+      tags: ["CAD Events"]
+      operationId: getCadEventsIds
+      summary: "Retrieve ids (CAD Events)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cad_tickets":
+    get:
+      tags: ["CAD Tickets"]
+      operationId: getCadTickets
+      summary: "Retrieve cad tickets (CAD Tickets)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["CAD Tickets"]
+      operationId: postCadTickets
+      summary: "Create/submit cad tickets (CAD Tickets)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cases":
+    get:
+      tags: ["Cases"]
+      operationId: getCases
+      summary: "Retrieve cases (Cases)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cases/notes/":
+    post:
+      tags: ["Cases"]
+      operationId: postCasesNotes
+      summary: "Create/submit notes (Cases)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/cases/updated":
+    get:
+      tags: ["Cases"]
+      operationId: getCasesUpdated
+      summary: "Retrieve updated (Cases)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/evidence/chain_events":
+    post:
+      tags: ["Evidence"]
+      operationId: postEvidenceChainEvents
+      summary: "Create/submit chain events (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/evidence/chains_of_custody":
+    post:
+      tags: ["Evidence"]
+      operationId: postEvidenceChainsOfCustody
+      summary: "Create/submit chains of custody (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/evidence/items":
+    get:
+      tags: ["Evidence"]
+      operationId: getEvidenceItems
+      summary: "Retrieve items (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["Evidence"]
+      operationId: postEvidenceItems
+      summary: "Create/submit items (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/evidence/items/import_event":
+    get:
+      tags: ["Evidence"]
+      operationId: getEvidenceItemsImportEvent
+      summary: "Retrieve import event (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/evidence/items/report_status_change":
+    get:
+      tags: ["Evidence"]
+      operationId: getEvidenceItemsReportStatusChange
+      summary: "Retrieve report status change (Evidence)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/gps":
+    post:
+      tags: ["GPS"]
+      operationId: postGps
+      summary: "Create/submit gps (GPS)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/":
+    get:
+      tags: ["Persons"]
+      operationId: getPerson
+      summary: "Retrieve person (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/attributes":
+    put:
+      tags: ["Persons"]
+      operationId: putPersonAttributes
+      summary: "Update attributes (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/identifying_marks":
+    post:
+      tags: ["Persons"]
+      operationId: postPersonIdentifyingMarks
+      summary: "Create/submit identifying marks (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/master":
+    post:
+      tags: ["Persons"]
+      operationId: postPersonMaster
+      summary: "Create/submit master (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/merge":
+    post:
+      tags: ["Persons"]
+      operationId: postPersonMerge
+      summary: "Create/submit merge (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/merge_with_criteria":
+    post:
+      tags: ["Persons"]
+      operationId: postPersonMergeWithCriteria
+      summary: "Create/submit merge with criteria (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/name_identifiers":
+    put:
+      tags: ["Persons"]
+      operationId: putPersonNameIdentifiers
+      summary: "Update name identifiers (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/person/search":
+    post:
+      tags: ["Persons"]
+      operationId: postPersonSearch
+      summary: "Create/submit search (Persons)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports":
+    post:
+      tags: ["Reports"]
+      operationId: postReports
+      summary: "Create/submit reports (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/":
+    post:
+      tags: ["Reports"]
+      operationId: postReports
+      summary: "Create/submit reports (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/arrest":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsArrest
+      summary: "Create/submit arrest (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/arrest/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsArrestBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/arrests":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsArrests
+      summary: "Retrieve arrests (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/bulk":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsBulk
+      summary: "Retrieve bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/bulk/reporting_event":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsBulkReportingEvent
+      summary: "Retrieve reporting event (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/bulk/reporting_event/with_cad_tickets":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsBulkReportingEventWithCadTickets
+      summary: "Retrieve with cad tickets (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/citation":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsCitation
+      summary: "Create/submit citation (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/citation/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsCitationBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/court_case/report_id":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsCourtCaseReportId
+      summary: "Create/submit report id (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/custom":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsCustom
+      summary: "Create/submit custom (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/custom/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsCustomBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/deleted_or_sealed":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsDeletedOrSealed
+      summary: "Retrieve deleted or sealed (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/field_contact":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsFieldContact
+      summary: "Create/submit field contact (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/field_contact/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsFieldContactBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/histories":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsHistories
+      summary: "Create/submit histories (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/label":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsLabel
+      summary: "Retrieve label (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/legacy_entity_details":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsLegacyEntityDetails
+      summary: "Create/submit legacy entity details (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/lockup_number/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsLockupNumberBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/missing_person":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsMissingPerson
+      summary: "Create/submit missing person (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/missing_person/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsMissingPersonBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/offense":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsOffense
+      summary: "Create/submit offense (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/offense/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsOffenseBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/record_number/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsRecordNumberBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/release":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsRelease
+      summary: "Create/submit release (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/released":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsReleased
+      summary: "Retrieve released (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/released/hydrated":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsReleasedHydrated
+      summary: "Retrieve hydrated (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/released/record_numbers":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsReleasedRecordNumbers
+      summary: "Retrieve record numbers (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/released/reporting_event":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsReleasedReportingEvent
+      summary: "Retrieve reporting event (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/released/reporting_event/hydrated":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsReleasedReportingEventHydrated
+      summary: "Retrieve hydrated (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/supplement":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsSupplement
+      summary: "Create/submit supplement (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/supplement/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsSupplementBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/tow_vehicle":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsTowVehicle
+      summary: "Create/submit tow vehicle (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/tow_vehicle/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsTowVehicleBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/traffic_crash":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsTrafficCrash
+      summary: "Create/submit traffic crash (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/traffic_crash/bulk":
+    post:
+      tags: ["Reports"]
+      operationId: postReportsTrafficCrashBulk
+      summary: "Create/submit bulk (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/reports/with_gang_trackings":
+    get:
+      tags: ["Reports"]
+      operationId: getReportsWithGangTrackings
+      summary: "Retrieve with gang trackings (Reports)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/tasks":
+    get:
+      tags: ["Tasks"]
+      operationId: getTasks
+      summary: "Retrieve tasks (Tasks)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    post:
+      tags: ["Tasks"]
+      operationId: postTasks
+      summary: "Create/submit tasks (Tasks)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users":
+    get:
+      tags: ["Users"]
+      operationId: getUsers
+      summary: "Retrieve users (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/":
+    get:
+      tags: ["Users"]
+      operationId: getUsers
+      summary: "Retrieve users (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/full":
+    get:
+      tags: ["Users"]
+      operationId: getUsersFull
+      summary: "Retrieve full (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/ids":
+    get:
+      tags: ["Users"]
+      operationId: getUsersIds
+      summary: "Retrieve ids (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/upsert":
+    post:
+      tags: ["Users"]
+      operationId: postUsersUpsert
+      summary: "Create/submit upsert (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/v2":
+    post:
+      tags: ["Users"]
+      operationId: postUsersV2
+      summary: "Create/submit v2 (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/users/with_roles":
+    post:
+      tags: ["Users"]
+      operationId: postUsersWithRoles
+      summary: "Create/submit with roles (Users)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/external/vehicle/search":
+    post:
+      tags: ["Vehicles"]
+      operationId: postVehicleSearch
+      summary: "Create/submit search (Vehicles)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/e911":
+    put:
+      tags: ["E911"]
+      operationId: putE911
+      summary: "Update e911 (E911)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/e911/nj":
+    put:
+      tags: ["E911"]
+      operationId: putE911Nj
+      summary: "Update nj (E911)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/warrants":
+    get:
+      tags: ["Warrants"]
+      operationId: getWarrants
+      summary: "Retrieve warrants (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+    put:
+      tags: ["Warrants"]
+      operationId: putWarrants
+      summary: "Update warrants (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/warrants/activities":
+    post:
+      tags: ["Warrants"]
+      operationId: postWarrantsActivities
+      summary: "Create/submit activities (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/warrants/numbers":
+    post:
+      tags: ["Warrants"]
+      operationId: postWarrantsNumbers
+      summary: "Create/submit numbers (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/warrants/search":
+    post:
+      tags: ["Warrants"]
+      operationId: postWarrantsSearch
+      summary: "Create/submit search (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+  "/partnerships/api/partnerships/warrants/status":
+    get:
+      tags: ["Warrants"]
+      operationId: getWarrantsStatus
+      summary: "Retrieve status (Warrants)"
+      responses:
+        '200':
+          description: Successful response wrapped in the standard ApiResult envelope.
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ApiResult'}
+        '400': {description: Bad request; success=false with error message.}
+        '401': {description: Missing or invalid HTTP Basic credentials.}
+        '403': {description: Authenticated token lacks access to the resource.}
+        '404': {description: Resource not found.}
+        '429': {description: Too many requests (RFC 6585 rate limiting).}
+        '500': {description: Internal server error.}
+components:
+  securitySchemes:
+    httpBasic:
+      type: http
+      scheme: basic
+      description: Secure API token presented via the standard HTTP Basic Authorization header on every request; issued by your Mark43 Technical Services Representative.
+  schemas:
+    ApiResult:
+      type: object
+      description: Standard Mark43 response envelope wrapping every endpoint's payload.
+      properties:
+        data:
+          description: The created or retrieved object(s); shape varies by endpoint.
+        success: {type: boolean, description: Whether the request succeeded.}
+        error: {type: string, description: Error message populated when success is false.}
+      required: [success]

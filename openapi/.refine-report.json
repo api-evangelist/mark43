@@ -1,0 +1,42 @@
+{
+  "provider": "mark43",
+  "sources": [
+    "mark43-associated-records-api-openapi.yml",
+    "mark43-attachments-api-openapi.yml",
+    "mark43-cad-configuration-api-openapi.yml",
+    "mark43-cad-events-api-openapi.yml",
+    "mark43-cad-tickets-api-openapi.yml",
+    "mark43-cases-api-openapi.yml",
+    "mark43-e911-api-openapi.yml",
+    "mark43-evidence-api-openapi.yml",
+    "mark43-gps-api-openapi.yml",
+    "mark43-persons-api-openapi.yml",
+    "mark43-reports-api-openapi.yml",
+    "mark43-tasks-api-openapi.yml",
+    "mark43-users-api-openapi.yml",
+    "mark43-vehicles-api-openapi.yml",
+    "mark43-warrants-api-openapi.yml"
+  ],
+  "outputs": [
+    "mark43-associated-records-api-openapi.yml",
+    "mark43-attachments-api-openapi.yml",
+    "mark43-cad-configuration-api-openapi.yml",
+    "mark43-cad-events-api-openapi.yml",
+    "mark43-cad-tickets-api-openapi.yml",
+    "mark43-cases-api-openapi.yml",
+    "mark43-e911-api-openapi.yml",
+    "mark43-evidence-api-openapi.yml",
+    "mark43-gps-api-openapi.yml",
+    "mark43-persons-api-openapi.yml",
+    "mark43-reports-api-openapi.yml",
+    "mark43-tasks-api-openapi.yml",
+    "mark43-users-api-openapi.yml",
+    "mark43-vehicles-api-openapi.yml",
+    "mark43-warrants-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

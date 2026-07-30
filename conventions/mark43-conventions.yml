@@ -1,0 +1,80 @@
+generated: '2026-07-20'
+method: searched
+source: https://developers.mark43.com/
+note: >-
+  Cross-cutting request/response semantics for the Mark43 Partnerships API, captured
+  from the published developer reference and corroborated against the derived OpenAPI.
+authentication:
+  style: HTTP Basic
+  detail: >-
+    Every request must carry a secure API token via the standard HTTP Basic
+    Authorization header. Tokens are issued by a Mark43 Technical Services
+    Representative per agency. No OAuth or API-key query parameter is used.
+  ref: authentication/mark43-authentication.yml
+transport:
+  protocol: HTTPS
+  media_type: application/json
+  charset: UTF-8
+  base_url: https://department.mark43.com/partnerships/api
+  tenancy: Per-agency subdomain (the "department" host segment is the agency tenant).
+http_verbs:
+  GET: Retrieves resources
+  POST: Creates resources
+  PUT: Changes and/or replaces resources or collections
+  DELETE: Deletes resources
+response_envelope:
+  description: >-
+    Every endpoint returns a consistent JSON envelope. Payload objects are nested
+    under `data`; `success` signals outcome; `error` carries a message on failure.
+  shape:
+    data: The created or retrieved object(s); shape varies by endpoint.
+    success: Boolean indicating whether the request was successful.
+    error: String populated with a corresponding error message when success is false.
+  ref: errors/mark43-problem-types.yml
+pagination:
+  style: offset
+  detail: >-
+    List endpoints accept offset-style paging query parameters. `size` bounds the
+    number of returned results; `from`/`offset` skip earlier results. Time-window
+    filtering is available via an `updatedAfter` (UTC) parameter on supported list
+    endpoints (e.g. cases/updated, reports).
+  params:
+  - name: size
+    in: query
+    type: integer(int32)
+    description: Pagination size (page length).
+  - name: from
+    in: query
+    type: integer(int32)
+    description: Pagination starting offset.
+  - name: offset
+    in: query
+    type: integer(int32)
+    description: Skip the return of previous results.
+  - name: updatedAfter
+    in: query
+    type: datetime(UTC)
+    description: Return only records updated after this UTC timestamp.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key header or contract is documented in the Mark43 developer
+    reference. Bulk endpoints (…/bulk) exist for batch submission but do not
+    document idempotent replay semantics.
+versioning:
+  scheme: none-documented
+  detail: >-
+    The Partnerships API is served under an unversioned /external and
+    /partnerships path space. A small number of resources expose a v2 variant
+    (e.g. users/v2) but no global version header or date-based versioning is
+    documented.
+status_codes:
+  standard: >-
+    Mark43 API uses the HTTP response status codes defined in RFC 2616 and RFC 6586
+    (as cited in the developer reference; the additional-status-codes reference for
+    429 is RFC 6585).
+  rate_limiting: 429 Too Many Requests signals rate limiting.
+cross_links:
+  authentication: authentication/mark43-authentication.yml
+  errors: errors/mark43-problem-types.yml
+  data_model: data-model/mark43-data-model.yml

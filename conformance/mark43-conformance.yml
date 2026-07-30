@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://developers.mark43.com/ (API conventions), https://trust.mark43.com/
+  (compliance program), openapi/mark43-partnerships-openapi.yml (derived)
+standards:
+- id: rest
+  conforms: true
+  evidence: "Documented as 'Based on REST principles'; standard HTTP verbs per action."
+- id: http-basic-auth
+  conforms: true
+  evidence: securityScheme type http, scheme basic (secure API token in Authorization header).
+- id: json
+  conforms: true
+  evidence: All requests/responses are JSON (UTF-8) with a consistent ApiResult envelope.
+- id: rfc7231-http-status
+  conforms: true
+  evidence: "Documented use of RFC 2616 / RFC 6585 HTTP status codes, including 429."
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a custom success/error envelope, not application/problem+json.
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 security scheme; authentication is HTTP Basic only.
+- id: oidc
+  conforms: false
+- id: nibrs
+  conforms: true
+  evidence: >-
+    Offense/arrest reporting endpoints align with US crime-reporting workflows;
+    Mark43 maintains a public NIBRS (National Incident-Based Reporting System)
+    Java library (github.com/mark43/nibrs).
+compliance_program:
+  source: https://trust.mark43.com/
+  certifications:
+  - SOC 2
+  - ISO/IEC 27001
+  - FedRAMP
+  - GDPR
+  - CSA STAR
+  - FIPS 140

@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: generated
+source: >-
+  Packaged Agent Skills generated from the derived Mark43 Partnerships OpenAPI
+  (openapi/mark43-partnerships-openapi.yml). Every step is grounded in an
+  operationId present verbatim in that spec; cross-cutting rules cite
+  ../conventions/, ../errors/, and ../authentication/.
+skills:
+- file: mark43-submit-arrest-report.md
+  name: Submit an arrest report to Mark43
+  api: openapi/mark43-partnerships-openapi.yml
+  operations: [postReportsArrest, postReportsArrestBulk, getReportsArrests]
+- file: mark43-search-and-retrieve-person.md
+  name: Search and retrieve a person in Mark43
+  api: openapi/mark43-partnerships-openapi.yml
+  operations: [postPersonSearch, getPerson, postPersonMaster]
+- file: mark43-track-evidence-chain-of-custody.md
+  name: Track evidence chain of custody in Mark43
+  api: openapi/mark43-partnerships-openapi.yml
+  operations: [postEvidenceItems, getEvidenceItems, postEvidenceChainsOfCustody, postEvidenceChainEvents]
+- file: mark43-ingest-cad-event.md
+  name: Ingest a CAD event into Mark43
+  api: openapi/mark43-partnerships-openapi.yml
+  operations: [postCadEvent, getCadEvents, getCadEventsActive, getCadConfigurationUnits]

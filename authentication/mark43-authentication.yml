@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/mark43-partnerships-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: httpBasic
+  type: http
+  scheme: basic
+  description: Secure API token presented via the standard HTTP Basic Authorization header on
+    every request; issued by your Mark43 Technical Services Representative.
+  sources:
+  - openapi/mark43-partnerships-openapi.yml

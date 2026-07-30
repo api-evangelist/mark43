@@ -1,0 +1,96 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/mark43-partnerships-openapi.yml (derived from https://developers.mark43.com/)
+note: >-
+  Entity-relationship graph derived from Mark43 Partnerships API schema names and endpoint
+  paths. Relationships are inferred from path structure; id-prefixes are not published.
+entities:
+  - name: Report
+    description: "A police/incident report (arrest, offense, traffic crash, tow vehicle, supplement, field contact, missing person, citation, custom)."
+  - name: Person
+    description: "A master or contextual person record with attributes, identifying marks, and name identifiers."
+  - name: Warrant
+    description: "A warrant record, its activities, numbers, and status."
+  - name: Case
+    description: "An investigative case with notes and updates."
+  - name: EvidenceItem
+    description: "A tracked evidence/property item with import events and status changes."
+  - name: ChainOfCustody
+    description: "A chain-of-custody record composed of chain events for an evidence item."
+  - name: Attachment
+    description: "A file or image attachment (streamable) linked to records."
+  - name: Task
+    description: "A work task assigned within the system."
+  - name: User
+    description: "A department user, optionally with roles."
+  - name: Unit
+    description: "A CAD/field unit with configurable states and statuses."
+  - name: Station
+    description: "A CAD station configuration entity."
+  - name: CadEvent
+    description: "A computer-aided-dispatch event/call for service, including scheduled events."
+  - name: CadTicket
+    description: "A CAD ticket associated with events."
+  - name: Vehicle
+    description: "A vehicle record (searchable)."
+  - name: Arrest
+    description: "An arrest report subtype."
+  - name: CourtCase
+    description: "A court case linked to a report."
+  - name: CadPhoneCall
+    description: "A phone call associated with a CAD event."
+  - name: E911Call
+    description: "An E911 call record (including NJ-specific variant)."
+relationships:
+  - from: Report
+    type: has_many
+    to: Offense
+    via: offense
+  - from: Report
+    type: has_many
+    to: Arrest
+    via: arrest
+  - from: Report
+    type: has_one
+    to: CourtCase
+    via: court_case
+  - from: Report
+    type: has_many
+    to: Attachment
+    via: attachment
+  - from: EvidenceItem
+    type: has_one
+    to: ChainOfCustody
+    via: chain_of_custody
+  - from: ChainOfCustody
+    type: has_many
+    to: ChainEvent
+    via: chain_events
+  - from: Person
+    type: has_many
+    to: PersonIdentifyingMark
+    via: identifying_marks
+  - from: Person
+    type: has_many
+    to: NameIdentifier
+    via: name_identifiers
+  - from: CadEvent
+    type: has_many
+    to: Unit
+    via: involved_unit
+  - from: CadEvent
+    type: has_many
+    to: CadPhoneCall
+    via: phone_call
+  - from: Warrant
+    type: has_many
+    to: WarrantActivity
+    via: activities
+  - from: User
+    type: has_many
+    to: Role
+    via: roles
+  - from: Case
+    type: has_many
+    to: CaseNote
+    via: notes

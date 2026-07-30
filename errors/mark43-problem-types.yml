@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  https://developers.mark43.com/ (documented response envelope + status codes) and
+  openapi/mark43-partnerships-openapi.yml (derived per-operation responses)
+format: envelope
+note: >-
+  Mark43 does not use RFC 9457 problem+json. Errors are surfaced through the
+  standard ApiResult envelope: on failure, `success` is false and `error` carries a
+  human-readable message, alongside the appropriate HTTP status code (RFC 2616 /
+  RFC 6585 additional codes).
+error_envelope:
+  content_type: application/json
+  fields:
+    success: Boolean; false when the request failed.
+    error: String; the error message when success is false.
+    data: Object; typically empty or partial on failure.
+status_codes:
+- status: 400
+  title: Bad Request
+  meaning: The request was malformed or failed validation.
+  envelope: success=false with an error message.
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid HTTP Basic credentials (API token).
+  remediation: Attach a valid secure API token in the Basic Authorization header.
+- status: 403
+  title: Forbidden
+  meaning: The authenticated token does not have access to the requested resource.
+- status: 404
+  title: Not Found
+  meaning: The requested resource or endpoint does not exist.
+- status: 429
+  title: Too Many Requests
+  meaning: Rate limit exceeded (RFC 6585 additional status code).
+  remediation: Back off and retry; reduce request rate.
+- status: 500
+  title: Internal Server Error
+  meaning: An unexpected server-side error occurred.
+cross_links:
+  conventions: conventions/mark43-conventions.yml

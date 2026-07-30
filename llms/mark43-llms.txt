@@ -1,0 +1,43 @@
+# Mark43
+
+> Mark43 is a cloud-native public safety software company. Its platform unifies computer-aided dispatch (CAD), records management (RMS), first-responder mobile apps, evidence and property management, and analytics for more than 300 law enforcement and public safety agencies. The Mark43 Partnerships (External) API lets approved technology partners integrate directly with an agency's Mark43 tenant.
+
+## About
+- Website: https://mark43.com/
+- Developer portal: https://developers.mark43.com/
+- Partners & integrations: https://mark43.com/partners-integrations/
+- Trust center (SOC 2, ISO 27001, FedRAMP, GDPR): https://trust.mark43.com/
+- GitHub: https://github.com/mark43
+
+## API
+- Name: Mark43 Partnerships API
+- Base URL: https://department.mark43.com/partnerships/api (per-agency subdomain)
+- Auth: HTTP Basic Authorization header with an agency-issued secure API token
+- Format: JSON (UTF-8); responses wrapped in a `{ data, success, error }` envelope
+- Status codes: RFC 2616 / RFC 6585 (429 for rate limiting)
+
+## Endpoint families (100 operations)
+- Reports — arrest, offense, traffic crash, tow vehicle, supplement, field contact, missing person, citation, custom (single + bulk), release, histories
+- Persons — master person, search, attributes, identifying marks, name identifiers, merge
+- Evidence — items, import events, chains of custody, chain events
+- Attachments — files, images, search, streaming
+- CAD — events (create, scheduled, additional info), configuration (units, stations, unit states/statuses), tickets, phone calls
+- Warrants — search, status, numbers, activities
+- Cases — list, updated, notes
+- Users — list, full, ids, upsert, v2, with roles
+- Tasks, Vehicles (search), Associated Records (external links), GPS, E911 (incl. NJ)
+
+## Specs & artifacts (this repo)
+- OpenAPI (derived): openapi/mark43-partnerships-openapi.yml
+- Authentication: authentication/mark43-authentication.yml
+- Conventions: conventions/mark43-conventions.yml
+- Error catalog: errors/mark43-problem-types.yml
+- Data model: data-model/mark43-data-model.yml
+- Conformance: conformance/mark43-conformance.yml
+- MCP candidate tools: mcp/mark43-mcp.yml
+- Trust center: security/mark43-trust-center.yml
+- Domain security: security/mark43-domain-security.yml
+- Agent skills: skills/_index.yml
+
+## Terms
+- Developer Terms of Use Agreement: https://developers.mark43.com/#developer-terms-of-use-agreement

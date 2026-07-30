@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: probed
+source: live HTTP probes of Mark43 hosts
+note: >-
+  No /.well-known/ discovery documents were served by the Mark43 hosts probed.
+  Absence is recorded as valid data. The Partnerships API uses HTTP Basic auth
+  (no OAuth/OIDC discovery), and no security.txt is published.
+hosts:
+- host: https://mark43.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://developers.mark43.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /sitemap.xml
+    status: 404
