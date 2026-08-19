@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records CAD Tickets API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CAD Tickets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve cad tickets (CAD Tickets)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad_tickets"
+          },
+          "docs": "Retrieve cad tickets (CAD Tickets)"
+        },
+        {
+          "info": {
+            "name": "Create/submit cad tickets (CAD Tickets)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad_tickets"
+          },
+          "docs": "Create/submit cad tickets (CAD Tickets)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

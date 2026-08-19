@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Warrants API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Warrants",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve warrants (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants"
+          },
+          "docs": "Retrieve warrants (Warrants)"
+        },
+        {
+          "info": {
+            "name": "Update warrants (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants"
+          },
+          "docs": "Update warrants (Warrants)"
+        },
+        {
+          "info": {
+            "name": "Create/submit activities (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants/activities"
+          },
+          "docs": "Create/submit activities (Warrants)"
+        },
+        {
+          "info": {
+            "name": "Create/submit numbers (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants/numbers"
+          },
+          "docs": "Create/submit numbers (Warrants)"
+        },
+        {
+          "info": {
+            "name": "Create/submit search (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants/search"
+          },
+          "docs": "Create/submit search (Warrants)"
+        },
+        {
+          "info": {
+            "name": "Retrieve status (Warrants)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/warrants/status"
+          },
+          "docs": "Retrieve status (Warrants)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,443 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Reports API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create/submit reports (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports"
+          },
+          "docs": "Create/submit reports (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit reports (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/"
+          },
+          "docs": "Create/submit reports (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit arrest (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/arrest"
+          },
+          "docs": "Create/submit arrest (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/arrest/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve arrests (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/arrests"
+          },
+          "docs": "Retrieve arrests (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/bulk"
+          },
+          "docs": "Retrieve bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve reporting event (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/bulk/reporting_event"
+          },
+          "docs": "Retrieve reporting event (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve with cad tickets (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/bulk/reporting_event/with_cad_tickets"
+          },
+          "docs": "Retrieve with cad tickets (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit citation (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/citation"
+          },
+          "docs": "Create/submit citation (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/citation/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit report id (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/court_case/report_id"
+          },
+          "docs": "Create/submit report id (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit custom (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/custom"
+          },
+          "docs": "Create/submit custom (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/custom/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve deleted or sealed (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/deleted_or_sealed"
+          },
+          "docs": "Retrieve deleted or sealed (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit field contact (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/field_contact"
+          },
+          "docs": "Create/submit field contact (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/field_contact/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit histories (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/histories"
+          },
+          "docs": "Create/submit histories (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve label (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/label"
+          },
+          "docs": "Retrieve label (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit legacy entity details (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/legacy_entity_details"
+          },
+          "docs": "Create/submit legacy entity details (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/lockup_number/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit missing person (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/missing_person"
+          },
+          "docs": "Create/submit missing person (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/missing_person/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit offense (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/offense"
+          },
+          "docs": "Create/submit offense (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/offense/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/record_number/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit release (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/release"
+          },
+          "docs": "Create/submit release (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve released (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/released"
+          },
+          "docs": "Retrieve released (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve hydrated (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/released/hydrated"
+          },
+          "docs": "Retrieve hydrated (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve record numbers (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/released/record_numbers"
+          },
+          "docs": "Retrieve record numbers (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve reporting event (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/released/reporting_event"
+          },
+          "docs": "Retrieve reporting event (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve hydrated (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/released/reporting_event/hydrated"
+          },
+          "docs": "Retrieve hydrated (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit supplement (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/supplement"
+          },
+          "docs": "Create/submit supplement (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/supplement/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit tow vehicle (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/tow_vehicle"
+          },
+          "docs": "Create/submit tow vehicle (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/tow_vehicle/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit traffic crash (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/traffic_crash"
+          },
+          "docs": "Create/submit traffic crash (Reports)"
+        },
+        {
+          "info": {
+            "name": "Create/submit bulk (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/traffic_crash/bulk"
+          },
+          "docs": "Create/submit bulk (Reports)"
+        },
+        {
+          "info": {
+            "name": "Retrieve with gang trackings (Reports)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/reports/with_gang_trackings"
+          },
+          "docs": "Retrieve with gang trackings (Reports)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

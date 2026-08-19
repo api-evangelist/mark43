@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Evidence API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Evidence",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create/submit chain events (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/chain_events"
+          },
+          "docs": "Create/submit chain events (Evidence)"
+        },
+        {
+          "info": {
+            "name": "Create/submit chains of custody (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/chains_of_custody"
+          },
+          "docs": "Create/submit chains of custody (Evidence)"
+        },
+        {
+          "info": {
+            "name": "Retrieve items (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/items"
+          },
+          "docs": "Retrieve items (Evidence)"
+        },
+        {
+          "info": {
+            "name": "Create/submit items (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/items"
+          },
+          "docs": "Create/submit items (Evidence)"
+        },
+        {
+          "info": {
+            "name": "Retrieve import event (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/items/import_event"
+          },
+          "docs": "Retrieve import event (Evidence)"
+        },
+        {
+          "info": {
+            "name": "Retrieve report status change (Evidence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/evidence/items/report_status_change"
+          },
+          "docs": "Retrieve report status change (Evidence)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Users API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve users (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users"
+          },
+          "docs": "Retrieve users (Users)"
+        },
+        {
+          "info": {
+            "name": "Retrieve users (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/"
+          },
+          "docs": "Retrieve users (Users)"
+        },
+        {
+          "info": {
+            "name": "Retrieve full (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/full"
+          },
+          "docs": "Retrieve full (Users)"
+        },
+        {
+          "info": {
+            "name": "Retrieve ids (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/ids"
+          },
+          "docs": "Retrieve ids (Users)"
+        },
+        {
+          "info": {
+            "name": "Create/submit upsert (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/upsert"
+          },
+          "docs": "Create/submit upsert (Users)"
+        },
+        {
+          "info": {
+            "name": "Create/submit v2 (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/v2"
+          },
+          "docs": "Create/submit v2 (Users)"
+        },
+        {
+          "info": {
+            "name": "Create/submit with roles (Users)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/users/with_roles"
+          },
+          "docs": "Create/submit with roles (Users)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

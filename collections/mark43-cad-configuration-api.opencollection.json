@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records CAD Configuration API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CAD Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve stations (CAD Configuration)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/configuration/stations"
+          },
+          "docs": "Retrieve stations (CAD Configuration)"
+        },
+        {
+          "info": {
+            "name": "Retrieve unit states (CAD Configuration)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/configuration/unit_states"
+          },
+          "docs": "Retrieve unit states (CAD Configuration)"
+        },
+        {
+          "info": {
+            "name": "Retrieve unit statuses (CAD Configuration)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/configuration/unit_statuses"
+          },
+          "docs": "Retrieve unit statuses (CAD Configuration)"
+        },
+        {
+          "info": {
+            "name": "Retrieve units (CAD Configuration)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/configuration/units"
+          },
+          "docs": "Retrieve units (CAD Configuration)"
+        },
+        {
+          "info": {
+            "name": "Create/submit units (CAD Configuration)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/configuration/units"
+          },
+          "docs": "Create/submit units (CAD Configuration)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

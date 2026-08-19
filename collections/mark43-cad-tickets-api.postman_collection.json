@@ -1,0 +1,832 @@
+{
+  "item": [
+    {
+      "id": "5f3fc916-7e96-4c39-8c26-73be9da786e3",
+      "name": "CAD Tickets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68373748-a227-4f23-a893-8b475797ac72",
+          "name": "Retrieve cad tickets (CAD Tickets)",
+          "request": {
+            "name": "Retrieve cad tickets (CAD Tickets)",
+            "description": {},
+            "url": {
+              "path": [
+                "partnerships",
+                "api",
+                "external",
+                "cad_tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your agency's Mark43 tenant subdomain.",
+                  "type": "any",
+                  "value": "{{department}}",
+                  "key": "department"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bdc66e46-afbe-45c2-af64-63979abd9499",
+              "name": "Successful response wrapped in the standard ApiResult envelope.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"data\": {},\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "173345ae-78f1-4a40-bcc9-25794a0936f3",
+              "name": "Bad request; success=false with error message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "db8a7bfa-dc7b-4cae-adb5-2c06a1e880fb",
+              "name": "Missing or invalid HTTP Basic credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "df599149-11c7-4e76-92d1-4e3852478884",
+              "name": "Authenticated token lacks access to the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a03b62fd-3beb-43df-b018-4f35dbcc62fb",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e0eddcb6-2702-4144-8cc1-54cdfea95d29",
+              "name": "Too many requests (RFC 6585 rate limiting).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f8527458-24d7-4c9d-b975-4a409c0047d1",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "364a0ced-a619-4696-87ea-12f253374c26",
+          "name": "Create/submit cad tickets (CAD Tickets)",
+          "request": {
+            "name": "Create/submit cad tickets (CAD Tickets)",
+            "description": {},
+            "url": {
+              "path": [
+                "partnerships",
+                "api",
+                "external",
+                "cad_tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your agency's Mark43 tenant subdomain.",
+                  "type": "any",
+                  "value": "{{department}}",
+                  "key": "department"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "efa49c46-2cd1-492c-81ea-a77d2bd83753",
+              "name": "Successful response wrapped in the standard ApiResult envelope.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"data\": {},\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67c1f3ce-fcb1-47ec-a00d-fd5833178549",
+              "name": "Bad request; success=false with error message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c24c2412-1a8c-4e76-9274-f12220e2cafd",
+              "name": "Missing or invalid HTTP Basic credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a3d85566-1fef-4def-9570-093f1a581487",
+              "name": "Authenticated token lacks access to the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6e16ae89-2ce5-4ecf-bc21-83ba899c0177",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d2ee34d9-dca5-4192-8da2-f258c351fd0b",
+              "name": "Too many requests (RFC 6585 rate limiting).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d058596a-7e76-422c-b634-1a413de387b6",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "cad_tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your agency's Mark43 tenant subdomain.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "department",
+      "key": "department"
+    },
+    {
+      "type": "string",
+      "value": "https://{{department}}.mark43.com/partnerships/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "79db6004-9c3e-45f0-9975-9ca126b788a0",
+    "name": "Mark43 Partnerships Associated Records CAD Tickets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Mark43's Partnerships (External) API lets approved law-enforcement technology partners integrate with a Mark43 agency's cloud RMS and CAD: create and read reports, persons, evidence and chain-of-custody, attachments, CAD events, warrants, tasks, users, and E911 data. REST over HTTPS with JSON payloads and HTTP Basic authentication using secure API tokens.",
+      "type": "text/plain"
+    }
+  }
+}

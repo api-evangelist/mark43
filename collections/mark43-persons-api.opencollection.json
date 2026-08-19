@@ -1,0 +1,113 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Persons API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Persons",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve person (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/"
+          },
+          "docs": "Retrieve person (Persons)"
+        },
+        {
+          "info": {
+            "name": "Update attributes (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/attributes"
+          },
+          "docs": "Update attributes (Persons)"
+        },
+        {
+          "info": {
+            "name": "Create/submit identifying marks (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/identifying_marks"
+          },
+          "docs": "Create/submit identifying marks (Persons)"
+        },
+        {
+          "info": {
+            "name": "Create/submit master (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/master"
+          },
+          "docs": "Create/submit master (Persons)"
+        },
+        {
+          "info": {
+            "name": "Create/submit merge (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/merge"
+          },
+          "docs": "Create/submit merge (Persons)"
+        },
+        {
+          "info": {
+            "name": "Create/submit merge with criteria (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/merge_with_criteria"
+          },
+          "docs": "Create/submit merge with criteria (Persons)"
+        },
+        {
+          "info": {
+            "name": "Update name identifiers (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/name_identifiers"
+          },
+          "docs": "Update name identifiers (Persons)"
+        },
+        {
+          "info": {
+            "name": "Create/submit search (Persons)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/person/search"
+          },
+          "docs": "Create/submit search (Persons)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

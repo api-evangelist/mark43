@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records E911 API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "E911",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update e911 (E911)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/e911"
+          },
+          "docs": "Update e911 (E911)"
+        },
+        {
+          "info": {
+            "name": "Update nj (E911)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/partnerships/e911/nj"
+          },
+          "docs": "Update nj (E911)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records Cases API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve cases (Cases)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cases"
+          },
+          "docs": "Retrieve cases (Cases)"
+        },
+        {
+          "info": {
+            "name": "Create/submit notes (Cases)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cases/notes/"
+          },
+          "docs": "Create/submit notes (Cases)"
+        },
+        {
+          "info": {
+            "name": "Retrieve updated (Cases)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cases/updated"
+          },
+          "docs": "Retrieve updated (Cases)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

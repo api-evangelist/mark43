@@ -1,0 +1,1253 @@
+{
+  "item": [
+    {
+      "id": "61a7bd88-c9cf-4345-95d9-cc5c4ab3d7e3",
+      "name": "Associated Records",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5702c57a-f400-4c77-8376-0e1238ccba01",
+          "name": "Retrieve external links (Associated Records)",
+          "request": {
+            "name": "Retrieve external links (Associated Records)",
+            "description": {},
+            "url": {
+              "path": [
+                "partnerships",
+                "api",
+                "external",
+                "associated_records",
+                "external_links"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your agency's Mark43 tenant subdomain.",
+                  "type": "any",
+                  "value": "{{department}}",
+                  "key": "department"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e51b67ec-9c2e-43b2-80fe-b60f5ba2b6bf",
+              "name": "Successful response wrapped in the standard ApiResult envelope.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {},\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1cc569c7-4702-4d48-8c42-0fef629d8bc9",
+              "name": "Bad request; success=false with error message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cee089c1-893d-4502-be62-2ae6b5f46aa0",
+              "name": "Missing or invalid HTTP Basic credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ce50c930-0891-4bb3-b5b5-69babf7e1dfe",
+              "name": "Authenticated token lacks access to the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0aaeb45b-35f6-42d1-b78f-33216dabd281",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b433a537-5263-4930-b768-cf8c462b9d84",
+              "name": "Too many requests (RFC 6585 rate limiting).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f5f89c61-82bd-47fb-9678-01c2186b7051",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70a24aca-097c-48e9-ad4b-e7998db092c6",
+          "name": "Create/submit external links (Associated Records)",
+          "request": {
+            "name": "Create/submit external links (Associated Records)",
+            "description": {},
+            "url": {
+              "path": [
+                "partnerships",
+                "api",
+                "external",
+                "associated_records",
+                "external_links"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your agency's Mark43 tenant subdomain.",
+                  "type": "any",
+                  "value": "{{department}}",
+                  "key": "department"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f402e51-81b7-4165-801f-f8e24db566d4",
+              "name": "Successful response wrapped in the standard ApiResult envelope.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {},\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e64ff53-b4bc-4f95-b048-962267e37708",
+              "name": "Bad request; success=false with error message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f792ecb6-b6f0-437b-b93d-8cdee132afa2",
+              "name": "Missing or invalid HTTP Basic credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3b2fbc7a-332e-4fa1-a4f7-1cf5867c2a28",
+              "name": "Authenticated token lacks access to the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a59e88e8-c8e2-4b38-9f31-dbe6ab4af87a",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "39a24f3a-250a-42e1-8372-6719be50f692",
+              "name": "Too many requests (RFC 6585 rate limiting).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d996a812-a1a8-45dc-a7af-b47971cde80c",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd89b30b-a91d-43f0-ac9a-408370a1189c",
+          "name": "Create/submit report ids (Associated Records)",
+          "request": {
+            "name": "Create/submit report ids (Associated Records)",
+            "description": {},
+            "url": {
+              "path": [
+                "partnerships",
+                "api",
+                "external",
+                "associated_records",
+                "external_links",
+                "report_ids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your agency's Mark43 tenant subdomain.",
+                  "type": "any",
+                  "value": "{{department}}",
+                  "key": "department"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "933a3f1b-1762-49b9-a755-83113c364367",
+              "name": "Successful response wrapped in the standard ApiResult envelope.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {},\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d10c8010-0fff-4dbe-b08b-ee49e991b4c8",
+              "name": "Bad request; success=false with error message.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1e70651f-2ce8-4ce0-8304-3b03a95b756b",
+              "name": "Missing or invalid HTTP Basic credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c4c9da4a-43e3-4d09-8cac-3e20dd4aaeed",
+              "name": "Authenticated token lacks access to the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ad2ec850-333b-40ae-aa68-1c1fa20778e2",
+              "name": "Resource not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "76b41f8a-12f6-430a-b39c-0bb4983bbd8c",
+              "name": "Too many requests (RFC 6585 rate limiting).",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2bf54ddd-c4a0-46cd-8c6b-ce4fa84cd940",
+              "name": "Internal server error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partnerships",
+                    "api",
+                    "external",
+                    "associated_records",
+                    "external_links",
+                    "report_ids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your agency's Mark43 tenant subdomain.",
+                      "type": "any",
+                      "value": "{{department}}",
+                      "key": "department"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your agency's Mark43 tenant subdomain.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "department",
+      "key": "department"
+    },
+    {
+      "type": "string",
+      "value": "https://{{department}}.mark43.com/partnerships/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "be77fd75-57f5-4d3c-88f6-36dce498abea",
+    "name": "Mark43 Partnerships Associated Records API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Mark43's Partnerships (External) API lets approved law-enforcement technology partners integrate with a Mark43 agency's cloud RMS and CAD: create and read reports, persons, evidence and chain-of-custody, attachments, CAD events, warrants, tasks, users, and E911 data. REST over HTTPS with JSON payloads and HTTP Basic authentication using secure API tokens.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Associated Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve external links (Associated Records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/associated_records/external_links"
+          },
+          "docs": "Retrieve external links (Associated Records)"
+        },
+        {
+          "info": {
+            "name": "Create/submit external links (Associated Records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/associated_records/external_links"
+          },
+          "docs": "Create/submit external links (Associated Records)"
+        },
+        {
+          "info": {
+            "name": "Create/submit report ids (Associated Records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/associated_records/external_links/report_ids"
+          },
+          "docs": "Create/submit report ids (Associated Records)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

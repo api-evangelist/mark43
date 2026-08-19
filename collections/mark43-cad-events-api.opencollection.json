@@ -1,0 +1,146 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mark43 Partnerships Associated Records CAD Events API",
+    "version": "external"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CAD Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create/submit event (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event"
+          },
+          "docs": "Create/submit event (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit additional info (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/additional_info"
+          },
+          "docs": "Create/submit additional info (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Retrieve scheduled (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled"
+          },
+          "docs": "Retrieve scheduled (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit scheduled (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled"
+          },
+          "docs": "Create/submit scheduled (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit agency (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled/update/agency"
+          },
+          "docs": "Create/submit agency (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit cfs (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled/update/cfs"
+          },
+          "docs": "Create/submit cfs (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit location (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled/update/location"
+          },
+          "docs": "Create/submit location (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Create/submit reschedule (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/event/scheduled/update/reschedule"
+          },
+          "docs": "Create/submit reschedule (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Retrieve events (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/events"
+          },
+          "docs": "Retrieve events (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Retrieve active (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/events/active"
+          },
+          "docs": "Retrieve active (CAD Events)"
+        },
+        {
+          "info": {
+            "name": "Retrieve ids (CAD Events)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{department}.mark43.com/partnerships/api/partnerships/api/external/cad/events/ids"
+          },
+          "docs": "Retrieve ids (CAD Events)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

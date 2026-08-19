@@ -2,310 +2,315 @@ generated: '2026-07-20'
 method: derived
 source: openapi/mark43-partnerships-openapi.yml (derived from https://developers.mark43.com/)
 status: candidate
-note: >-
-  No official Mark43-hosted MCP server was found. Candidate tool list derived
-  one-to-one from the published Mark43 Partnerships API operations.
+note: No official Mark43-hosted MCP server was found. Candidate tool list derived one-to-one from the
+  published Mark43 Partnerships API operations.
 server:
   name: mark43-partnerships
   transport: http
 tools:
-  - name: getAssociatedRecordsExternalLinks
-    description: "Retrieve external links (Associated Records)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getAssociatedRecordsExternalLinks"
-  - name: getAttachments
-    description: "Retrieve attachments (Attachments)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getAttachments"
-  - name: getAttachmentsStream
-    description: "Retrieve stream (Attachments)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getAttachmentsStream"
-  - name: getCadConfigurationStations
-    description: "Retrieve stations (CAD Configuration)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadConfigurationStations"
-  - name: getCadConfigurationUnitStates
-    description: "Retrieve unit states (CAD Configuration)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnitStates"
-  - name: getCadConfigurationUnitStatuses
-    description: "Retrieve unit statuses (CAD Configuration)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnitStatuses"
-  - name: getCadConfigurationUnits
-    description: "Retrieve units (CAD Configuration)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnits"
-  - name: getCadEventScheduled
-    description: "Retrieve scheduled (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadEventScheduled"
-  - name: getCadEvents
-    description: "Retrieve events (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadEvents"
-  - name: getCadEventsActive
-    description: "Retrieve active (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadEventsActive"
-  - name: getCadEventsIds
-    description: "Retrieve ids (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadEventsIds"
-  - name: getCadTickets
-    description: "Retrieve cad tickets (CAD Tickets)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCadTickets"
-  - name: getCases
-    description: "Retrieve cases (Cases)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCases"
-  - name: getCasesUpdated
-    description: "Retrieve updated (Cases)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getCasesUpdated"
-  - name: getEvidenceItems
-    description: "Retrieve items (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getEvidenceItems"
-  - name: getEvidenceItemsImportEvent
-    description: "Retrieve import event (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getEvidenceItemsImportEvent"
-  - name: getEvidenceItemsReportStatusChange
-    description: "Retrieve report status change (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getEvidenceItemsReportStatusChange"
-  - name: getPerson
-    description: "Retrieve person (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getPerson"
-  - name: getReportsArrests
-    description: "Retrieve arrests (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsArrests"
-  - name: getReportsBulk
-    description: "Retrieve bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsBulk"
-  - name: getReportsBulkReportingEvent
-    description: "Retrieve reporting event (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsBulkReportingEvent"
-  - name: getReportsBulkReportingEventWithCadTickets
-    description: "Retrieve with cad tickets (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsBulkReportingEventWithCadTickets"
-  - name: getReportsDeletedOrSealed
-    description: "Retrieve deleted or sealed (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsDeletedOrSealed"
-  - name: getReportsLabel
-    description: "Retrieve label (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsLabel"
-  - name: getReportsReleased
-    description: "Retrieve released (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsReleased"
-  - name: getReportsReleasedHydrated
-    description: "Retrieve hydrated (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsReleasedHydrated"
-  - name: getReportsReleasedRecordNumbers
-    description: "Retrieve record numbers (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsReleasedRecordNumbers"
-  - name: getReportsReleasedReportingEvent
-    description: "Retrieve reporting event (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsReleasedReportingEvent"
-  - name: getReportsReleasedReportingEventHydrated
-    description: "Retrieve hydrated (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsReleasedReportingEventHydrated"
-  - name: getReportsWithGangTrackings
-    description: "Retrieve with gang trackings (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getReportsWithGangTrackings"
-  - name: getTasks
-    description: "Retrieve tasks (Tasks)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getTasks"
-  - name: getUsers
-    description: "Retrieve users (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getUsers"
-  - name: getUsers
-    description: "Retrieve users (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getUsers"
-  - name: getUsersFull
-    description: "Retrieve full (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getUsersFull"
-  - name: getUsersIds
-    description: "Retrieve ids (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getUsersIds"
-  - name: getWarrants
-    description: "Retrieve warrants (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getWarrants"
-  - name: getWarrantsStatus
-    description: "Retrieve status (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#getWarrantsStatus"
-  - name: postAssociatedRecordsExternalLinks
-    description: "Create/submit external links (Associated Records)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postAssociatedRecordsExternalLinks"
-  - name: postAssociatedRecordsExternalLinksReportIds
-    description: "Create/submit report ids (Associated Records)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postAssociatedRecordsExternalLinksReportIds"
-  - name: postAttachmentsFiles
-    description: "Create/submit files (Attachments)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postAttachmentsFiles"
-  - name: postAttachmentsImages
-    description: "Create/submit images (Attachments)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postAttachmentsImages"
-  - name: postAttachmentsSearch
-    description: "Create/submit search (Attachments)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postAttachmentsSearch"
-  - name: postCadConfigurationUnits
-    description: "Create/submit units (CAD Configuration)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadConfigurationUnits"
-  - name: postCadEvent
-    description: "Create/submit event (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEvent"
-  - name: postCadEventAdditionalInfo
-    description: "Create/submit additional info (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventAdditionalInfo"
-  - name: postCadEventScheduled
-    description: "Create/submit scheduled (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventScheduled"
-  - name: postCadEventScheduledUpdateAgency
-    description: "Create/submit agency (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateAgency"
-  - name: postCadEventScheduledUpdateCfs
-    description: "Create/submit cfs (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateCfs"
-  - name: postCadEventScheduledUpdateLocation
-    description: "Create/submit location (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateLocation"
-  - name: postCadEventScheduledUpdateReschedule
-    description: "Create/submit reschedule (CAD Events)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateReschedule"
-  - name: postCadTickets
-    description: "Create/submit cad tickets (CAD Tickets)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCadTickets"
-  - name: postCasesNotes
-    description: "Create/submit notes (Cases)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postCasesNotes"
-  - name: postEvidenceChainEvents
-    description: "Create/submit chain events (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postEvidenceChainEvents"
-  - name: postEvidenceChainsOfCustody
-    description: "Create/submit chains of custody (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postEvidenceChainsOfCustody"
-  - name: postEvidenceItems
-    description: "Create/submit items (Evidence)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postEvidenceItems"
-  - name: postGps
-    description: "Create/submit gps (GPS)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postGps"
-  - name: postPersonIdentifyingMarks
-    description: "Create/submit identifying marks (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postPersonIdentifyingMarks"
-  - name: postPersonMaster
-    description: "Create/submit master (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postPersonMaster"
-  - name: postPersonMerge
-    description: "Create/submit merge (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postPersonMerge"
-  - name: postPersonMergeWithCriteria
-    description: "Create/submit merge with criteria (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postPersonMergeWithCriteria"
-  - name: postPersonSearch
-    description: "Create/submit search (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postPersonSearch"
-  - name: postReports
-    description: "Create/submit reports (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReports"
-  - name: postReports
-    description: "Create/submit reports (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReports"
-  - name: postReportsArrest
-    description: "Create/submit arrest (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsArrest"
-  - name: postReportsArrestBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsArrestBulk"
-  - name: postReportsCitation
-    description: "Create/submit citation (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsCitation"
-  - name: postReportsCitationBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsCitationBulk"
-  - name: postReportsCourtCaseReportId
-    description: "Create/submit report id (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsCourtCaseReportId"
-  - name: postReportsCustom
-    description: "Create/submit custom (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsCustom"
-  - name: postReportsCustomBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsCustomBulk"
-  - name: postReportsFieldContact
-    description: "Create/submit field contact (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsFieldContact"
-  - name: postReportsFieldContactBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsFieldContactBulk"
-  - name: postReportsHistories
-    description: "Create/submit histories (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsHistories"
-  - name: postReportsLegacyEntityDetails
-    description: "Create/submit legacy entity details (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsLegacyEntityDetails"
-  - name: postReportsLockupNumberBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsLockupNumberBulk"
-  - name: postReportsMissingPerson
-    description: "Create/submit missing person (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsMissingPerson"
-  - name: postReportsMissingPersonBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsMissingPersonBulk"
-  - name: postReportsOffense
-    description: "Create/submit offense (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsOffense"
-  - name: postReportsOffenseBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsOffenseBulk"
-  - name: postReportsRecordNumberBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsRecordNumberBulk"
-  - name: postReportsRelease
-    description: "Create/submit release (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsRelease"
-  - name: postReportsSupplement
-    description: "Create/submit supplement (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsSupplement"
-  - name: postReportsSupplementBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsSupplementBulk"
-  - name: postReportsTowVehicle
-    description: "Create/submit tow vehicle (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsTowVehicle"
-  - name: postReportsTowVehicleBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsTowVehicleBulk"
-  - name: postReportsTrafficCrash
-    description: "Create/submit traffic crash (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsTrafficCrash"
-  - name: postReportsTrafficCrashBulk
-    description: "Create/submit bulk (Reports)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postReportsTrafficCrashBulk"
-  - name: postTasks
-    description: "Create/submit tasks (Tasks)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postTasks"
-  - name: postUsersUpsert
-    description: "Create/submit upsert (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postUsersUpsert"
-  - name: postUsersV2
-    description: "Create/submit v2 (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postUsersV2"
-  - name: postUsersWithRoles
-    description: "Create/submit with roles (Users)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postUsersWithRoles"
-  - name: postVehicleSearch
-    description: "Create/submit search (Vehicles)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postVehicleSearch"
-  - name: postWarrantsActivities
-    description: "Create/submit activities (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postWarrantsActivities"
-  - name: postWarrantsNumbers
-    description: "Create/submit numbers (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postWarrantsNumbers"
-  - name: postWarrantsSearch
-    description: "Create/submit search (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#postWarrantsSearch"
-  - name: putE911
-    description: "Update e911 (E911)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#putE911"
-  - name: putE911Nj
-    description: "Update nj (E911)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#putE911Nj"
-  - name: putPersonAttributes
-    description: "Update attributes (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#putPersonAttributes"
-  - name: putPersonNameIdentifiers
-    description: "Update name identifiers (Persons)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#putPersonNameIdentifiers"
-  - name: putWarrants
-    description: "Update warrants (Warrants)"
-    source_operation: "openapi/mark43-partnerships-openapi.yml#putWarrants"
+- name: getAssociatedRecordsExternalLinks
+  description: Retrieve external links (Associated Records)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getAssociatedRecordsExternalLinks
+- name: getAttachments
+  description: Retrieve attachments (Attachments)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getAttachments
+- name: getAttachmentsStream
+  description: Retrieve stream (Attachments)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getAttachmentsStream
+- name: getCadConfigurationStations
+  description: Retrieve stations (CAD Configuration)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadConfigurationStations
+- name: getCadConfigurationUnitStates
+  description: Retrieve unit states (CAD Configuration)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnitStates
+- name: getCadConfigurationUnitStatuses
+  description: Retrieve unit statuses (CAD Configuration)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnitStatuses
+- name: getCadConfigurationUnits
+  description: Retrieve units (CAD Configuration)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadConfigurationUnits
+- name: getCadEventScheduled
+  description: Retrieve scheduled (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadEventScheduled
+- name: getCadEvents
+  description: Retrieve events (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadEvents
+- name: getCadEventsActive
+  description: Retrieve active (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadEventsActive
+- name: getCadEventsIds
+  description: Retrieve ids (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadEventsIds
+- name: getCadTickets
+  description: Retrieve cad tickets (CAD Tickets)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCadTickets
+- name: getCases
+  description: Retrieve cases (Cases)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCases
+- name: getCasesUpdated
+  description: Retrieve updated (Cases)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getCasesUpdated
+- name: getEvidenceItems
+  description: Retrieve items (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getEvidenceItems
+- name: getEvidenceItemsImportEvent
+  description: Retrieve import event (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getEvidenceItemsImportEvent
+- name: getEvidenceItemsReportStatusChange
+  description: Retrieve report status change (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getEvidenceItemsReportStatusChange
+- name: getPerson
+  description: Retrieve person (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getPerson
+- name: getReportsArrests
+  description: Retrieve arrests (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsArrests
+- name: getReportsBulk
+  description: Retrieve bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsBulk
+- name: getReportsBulkReportingEvent
+  description: Retrieve reporting event (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsBulkReportingEvent
+- name: getReportsBulkReportingEventWithCadTickets
+  description: Retrieve with cad tickets (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsBulkReportingEventWithCadTickets
+- name: getReportsDeletedOrSealed
+  description: Retrieve deleted or sealed (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsDeletedOrSealed
+- name: getReportsLabel
+  description: Retrieve label (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsLabel
+- name: getReportsReleased
+  description: Retrieve released (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsReleased
+- name: getReportsReleasedHydrated
+  description: Retrieve hydrated (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsReleasedHydrated
+- name: getReportsReleasedRecordNumbers
+  description: Retrieve record numbers (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsReleasedRecordNumbers
+- name: getReportsReleasedReportingEvent
+  description: Retrieve reporting event (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsReleasedReportingEvent
+- name: getReportsReleasedReportingEventHydrated
+  description: Retrieve hydrated (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsReleasedReportingEventHydrated
+- name: getReportsWithGangTrackings
+  description: Retrieve with gang trackings (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getReportsWithGangTrackings
+- name: getTasks
+  description: Retrieve tasks (Tasks)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getTasks
+- name: getUsers
+  description: Retrieve users (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getUsers
+- name: getUsers
+  description: Retrieve users (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getUsers
+- name: getUsersFull
+  description: Retrieve full (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getUsersFull
+- name: getUsersIds
+  description: Retrieve ids (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getUsersIds
+- name: getWarrants
+  description: Retrieve warrants (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getWarrants
+- name: getWarrantsStatus
+  description: Retrieve status (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#getWarrantsStatus
+- name: postAssociatedRecordsExternalLinks
+  description: Create/submit external links (Associated Records)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postAssociatedRecordsExternalLinks
+- name: postAssociatedRecordsExternalLinksReportIds
+  description: Create/submit report ids (Associated Records)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postAssociatedRecordsExternalLinksReportIds
+- name: postAttachmentsFiles
+  description: Create/submit files (Attachments)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postAttachmentsFiles
+- name: postAttachmentsImages
+  description: Create/submit images (Attachments)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postAttachmentsImages
+- name: postAttachmentsSearch
+  description: Create/submit search (Attachments)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postAttachmentsSearch
+- name: postCadConfigurationUnits
+  description: Create/submit units (CAD Configuration)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadConfigurationUnits
+- name: postCadEvent
+  description: Create/submit event (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEvent
+- name: postCadEventAdditionalInfo
+  description: Create/submit additional info (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventAdditionalInfo
+- name: postCadEventScheduled
+  description: Create/submit scheduled (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventScheduled
+- name: postCadEventScheduledUpdateAgency
+  description: Create/submit agency (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateAgency
+- name: postCadEventScheduledUpdateCfs
+  description: Create/submit cfs (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateCfs
+- name: postCadEventScheduledUpdateLocation
+  description: Create/submit location (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateLocation
+- name: postCadEventScheduledUpdateReschedule
+  description: Create/submit reschedule (CAD Events)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadEventScheduledUpdateReschedule
+- name: postCadTickets
+  description: Create/submit cad tickets (CAD Tickets)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCadTickets
+- name: postCasesNotes
+  description: Create/submit notes (Cases)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postCasesNotes
+- name: postEvidenceChainEvents
+  description: Create/submit chain events (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postEvidenceChainEvents
+- name: postEvidenceChainsOfCustody
+  description: Create/submit chains of custody (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postEvidenceChainsOfCustody
+- name: postEvidenceItems
+  description: Create/submit items (Evidence)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postEvidenceItems
+- name: postGps
+  description: Create/submit gps (GPS)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postGps
+- name: postPersonIdentifyingMarks
+  description: Create/submit identifying marks (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postPersonIdentifyingMarks
+- name: postPersonMaster
+  description: Create/submit master (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postPersonMaster
+- name: postPersonMerge
+  description: Create/submit merge (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postPersonMerge
+- name: postPersonMergeWithCriteria
+  description: Create/submit merge with criteria (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postPersonMergeWithCriteria
+- name: postPersonSearch
+  description: Create/submit search (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postPersonSearch
+- name: postReports
+  description: Create/submit reports (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReports
+- name: postReports
+  description: Create/submit reports (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReports
+- name: postReportsArrest
+  description: Create/submit arrest (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsArrest
+- name: postReportsArrestBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsArrestBulk
+- name: postReportsCitation
+  description: Create/submit citation (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsCitation
+- name: postReportsCitationBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsCitationBulk
+- name: postReportsCourtCaseReportId
+  description: Create/submit report id (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsCourtCaseReportId
+- name: postReportsCustom
+  description: Create/submit custom (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsCustom
+- name: postReportsCustomBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsCustomBulk
+- name: postReportsFieldContact
+  description: Create/submit field contact (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsFieldContact
+- name: postReportsFieldContactBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsFieldContactBulk
+- name: postReportsHistories
+  description: Create/submit histories (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsHistories
+- name: postReportsLegacyEntityDetails
+  description: Create/submit legacy entity details (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsLegacyEntityDetails
+- name: postReportsLockupNumberBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsLockupNumberBulk
+- name: postReportsMissingPerson
+  description: Create/submit missing person (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsMissingPerson
+- name: postReportsMissingPersonBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsMissingPersonBulk
+- name: postReportsOffense
+  description: Create/submit offense (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsOffense
+- name: postReportsOffenseBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsOffenseBulk
+- name: postReportsRecordNumberBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsRecordNumberBulk
+- name: postReportsRelease
+  description: Create/submit release (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsRelease
+- name: postReportsSupplement
+  description: Create/submit supplement (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsSupplement
+- name: postReportsSupplementBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsSupplementBulk
+- name: postReportsTowVehicle
+  description: Create/submit tow vehicle (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsTowVehicle
+- name: postReportsTowVehicleBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsTowVehicleBulk
+- name: postReportsTrafficCrash
+  description: Create/submit traffic crash (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsTrafficCrash
+- name: postReportsTrafficCrashBulk
+  description: Create/submit bulk (Reports)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postReportsTrafficCrashBulk
+- name: postTasks
+  description: Create/submit tasks (Tasks)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postTasks
+- name: postUsersUpsert
+  description: Create/submit upsert (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postUsersUpsert
+- name: postUsersV2
+  description: Create/submit v2 (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postUsersV2
+- name: postUsersWithRoles
+  description: Create/submit with roles (Users)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postUsersWithRoles
+- name: postVehicleSearch
+  description: Create/submit search (Vehicles)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postVehicleSearch
+- name: postWarrantsActivities
+  description: Create/submit activities (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postWarrantsActivities
+- name: postWarrantsNumbers
+  description: Create/submit numbers (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postWarrantsNumbers
+- name: postWarrantsSearch
+  description: Create/submit search (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#postWarrantsSearch
+- name: putE911
+  description: Update e911 (E911)
+  source_operation: openapi/mark43-partnerships-openapi.yml#putE911
+- name: putE911Nj
+  description: Update nj (E911)
+  source_operation: openapi/mark43-partnerships-openapi.yml#putE911Nj
+- name: putPersonAttributes
+  description: Update attributes (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#putPersonAttributes
+- name: putPersonNameIdentifiers
+  description: Update name identifiers (Persons)
+  source_operation: openapi/mark43-partnerships-openapi.yml#putPersonNameIdentifiers
+- name: putWarrants
+  description: Update warrants (Warrants)
+  source_operation: openapi/mark43-partnerships-openapi.yml#putWarrants
+deployment:
+  mode: none
+  verified: derived
+  tools: 100
+  checked: '2026-08-12'
+  source: catalog MCP census
