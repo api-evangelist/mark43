@@ -31,7 +31,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 image: https://mark43.com/wp-content/uploads/2021/04/cropped-Mark43_logo_horizontal_black-1-1-32x32.png
