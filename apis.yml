@@ -295,6 +295,8 @@ apis:
   humanURL: https://developers.mark43.com/
   baseURL: https://department.mark43.com/partnerships/api
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -317,6 +319,8 @@ apis:
   humanURL: https://developers.mark43.com/
   baseURL: https://department.mark43.com/partnerships/api
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
