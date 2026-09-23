@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Mark43 Partnerships Associated Records Cases API
+  title: Mark43 Partnerships Cases API
   version: external
   description: 'Mark43''s Partnerships (External) API lets approved law-enforcement technology partners integrate with a Mark43 agency''s cloud RMS and CAD: create and read reports, persons, evidence and chain-of-custody, attachments, CAD events, warrants, tasks, users, and E911 data. REST over HTTPS with JSON payloads and HTTP Basic authentication using secure API tokens.'
   x-provenance:

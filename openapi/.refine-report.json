@@ -1,21 +1,7 @@
 {
   "provider": "mark43",
   "sources": [
-    "mark43-associated-records-api-openapi.yml",
-    "mark43-attachments-api-openapi.yml",
-    "mark43-cad-configuration-api-openapi.yml",
-    "mark43-cad-events-api-openapi.yml",
-    "mark43-cad-tickets-api-openapi.yml",
-    "mark43-cases-api-openapi.yml",
-    "mark43-e911-api-openapi.yml",
-    "mark43-evidence-api-openapi.yml",
-    "mark43-gps-api-openapi.yml",
-    "mark43-persons-api-openapi.yml",
-    "mark43-reports-api-openapi.yml",
-    "mark43-tasks-api-openapi.yml",
-    "mark43-users-api-openapi.yml",
-    "mark43-vehicles-api-openapi.yml",
-    "mark43-warrants-api-openapi.yml"
+    "_original/mark43-partnerships-openapi.yml"
   ],
   "outputs": [
     "mark43-associated-records-api-openapi.yml",
@@ -37,6 +23,26 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mark43-partnerships-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "mark43-associated-records-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-attachments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-cad-configuration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-cad-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-cad-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-cases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-e911-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-evidence-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-gps-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-persons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-vehicles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mark43-warrants-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
