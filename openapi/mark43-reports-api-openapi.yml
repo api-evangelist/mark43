@@ -48,7 +48,7 @@ paths:
     post:
       tags:
       - Reports
-      operationId: postReports
+      operationId: postPartnershipsApiExternalReports
       summary: Create/submit reports (Reports)
       responses:
         '200':
@@ -69,6 +69,8 @@ paths:
           description: Too many requests (RFC 6585 rate limiting).
         '500':
           description: Internal server error.
+      x-operation-id-source: normalized
+      x-operation-id-original: postReports
   /partnerships/api/external/reports/arrest:
     post:
       tags:

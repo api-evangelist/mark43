@@ -48,7 +48,7 @@ paths:
     get:
       tags:
       - Users
-      operationId: getUsers
+      operationId: getPartnershipsApiExternalUsers
       summary: Retrieve users (Users)
       responses:
         '200':
@@ -69,6 +69,8 @@ paths:
           description: Too many requests (RFC 6585 rate limiting).
         '500':
           description: Internal server error.
+      x-operation-id-source: normalized
+      x-operation-id-original: getUsers
   /partnerships/api/external/users/full:
     get:
       tags:
