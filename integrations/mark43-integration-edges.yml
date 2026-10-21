@@ -122,6 +122,35 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: Colorado CBI CJIS Vendor Management Program
+  partner: null
+  partner_match: register-name
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cbi.colorado.gov/criminal-justice/cjis-security/cjis-vendor-management-program/vendor-directory
+  category: CJIS vendor programme (Colorado)
+  contract_reference:
+    register: Colorado Bureau of Investigation CJIS Vendor Management Program directory
+    standard: FBI CJIS Security Policy
+    spec_file: null
+    role: cjis-vendor-enrolled
+    registered_name: Mark43, Inc.
+    register_country: US
+    register_state: CO
+    matched_domain: null
+    matched_by: register-name
+    signal_note: 'participation only: enrolment in a state CSA''s vendor programme (staff fingerprinting); the CBI
+      states presence is not a guarantee of CJIS compliance'
+    detected_by: sweep-public-safety-ng911.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    register_name_note: register-name 'mark43' = mark43; no wikidata P856
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-public-safety-ng911.py
+  first_seen: '2026-10-20'
 generated: '2026-10-15'
 method: searched
 source:
@@ -134,3 +163,11 @@ checked:
 - https://govramp.org/program-participants
 - https://raw.githubusercontent.com/18F/fedramp-data/4b73d9247fd6360759960e4690e3ce4ca858e0fa/data/data.json
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
+- https://appcomm.org/
+- https://apps.firstnet.att.com/
+- https://cbi.colorado.gov/criminal-justice/cjis-security/cjis-vendor-management-program/vendor-directory
+- https://www.dps.texas.gov/section/infrastructure-operations/vendor-forms
+- https://www.firstnet.com/apps.html
+- https://www.firstnet.com/content/dam/firstnet/white-papers/firstnet-app-catalog-booklet.pdf
+- https://www.ijis.org/
+- https://www.nena.org/
